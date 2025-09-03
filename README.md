@@ -14,3 +14,4 @@ Web estática para el restaurante **Morado** (Requena). Diseñada para publicars
 ## Notas
 - El formulario de reservas usa `mailto:` por defecto. Para recibir reservas de forma automática, reemplaza el `action` por un endpoint (Formspree, Netlify Forms o una API propia).
 - Personaliza textos, teléfono, horarios y fotos en `index.html`.
+
