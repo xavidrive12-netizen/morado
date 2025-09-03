@@ -18,8 +18,9 @@
     "description": "Restaurante de almuerzos y cenas en Requena. Bocatas, hamburguesas, carnes y ensaladas de alta calidad y precio competitivo.",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Calle San Agustín",
       "addressLocality": "Requena",
-      "addressRegion": "Comunidad Valenciana",
+      "addressRegion": "Valencia",
       "addressCountry": "ES"
     },
     "telephone": "+34 600 000 000",
@@ -66,26 +67,33 @@
 
   <!-- Hero -->
   <main id="inicio" class="max-w-5xl mx-auto p-6">
-    <section class="grid md:grid-cols-2 gap-8 items-center py-12">
-      <div>
-        <h2 class="text-4xl font-extrabold text-purple-700 mb-3">Morado — Sabor de siempre, trato de siempre</h2>
-        <p class="text-gray-700 mb-4">
+    <section class="relative grid md:grid-cols-2 gap-8 items-center py-12 rounded-2xl overflow-hidden" style="background-image: url('assets/fachada.jpg'); background-size: cover; background-position: center;">
+      <!-- overlay for readability -->
+      <div class="absolute inset-0 bg-black/40" aria-hidden="true"></div>
+
+      <div class="relative z-10 text-white">
+        <h2 class="text-4xl font-extrabold text-white mb-3">Morado — Sabor de siempre, trato de siempre</h2>
+        <p class="text-white/90 mb-4">
           Restaurante en Requena especializado en almuerzos y cenas. Bocatas clásicos, hamburguesas jugosas, carnes y ensaladas frescas.
           Calidad notable a precio competitivo. Nuestro público fiel es la mejor carta de presentación.
         </p>
         <div class="flex gap-3">
           <a href="#reservas" class="bg-purple-700 text-white px-5 py-3 rounded-md">Reservar mesa</a>
-          <a href="#menu" class="border border-purple-700 text-purple-700 px-5 py-3 rounded-md">Ver menú</a>
+          <a href="#menu" class="border border-white text-white px-5 py-3 rounded-md">Ver menú</a>
         </div>
-        <ul class="mt-6 text-sm text-gray-600 space-y-1">
-          <li>📍 Requena, Comunidad Valenciana — Local con ambiente familiar</li>
+        <ul class="mt-6 text-sm text-white/80 space-y-1">
+          <li>📍 Requena, Valencia — Local con ambiente familiar</li>
           <li>⏰ Cocina: Almuerzos y cenas</li>
           <li>⭐ Clientes fieles y servicio cercano</li>
         </ul>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-lg">
-        <!-- Imagen de ejemplo: sustituye por assets/foto.jpg si la tienes -->
-        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6b6b3adf8ef03f2f5f7b8a2e1f3c4b2a" alt="Plato Morado" class="w-full h-64 object-cover">
+
+      <!-- right column: optional secondary image (kept for layout consistency) -->
+      <div class="relative z-10">
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <!-- If you prefer the hero to be fully the fachada.jpg background, this image acts as a fallback/secondary visual. -->
+          <img src="assets/fachada.jpg" alt="Fachada Morado" class="w-full h-64 object-cover">
+        </div>
       </div>
     </section>
 
@@ -93,8 +101,9 @@
     <section id="menu" class="py-10">
       <h3 class="text-2xl font-bold mb-6">Menú destacado</h3>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card ejemplo -->
+        <!-- Bocata (imagen añadida) -->
         <article class="bg-white p-4 rounded-2xl shadow hover:scale-[1.02] transition">
+          <img src="assets/bocata.jpg" alt="Bocata" class="w-full h-36 object-cover rounded-md mb-3" onerror="this.style.display='none'">
           <h4 class="font-semibold text-lg">Bocata Clásico</h4>
           <p class="text-sm text-gray-600 mb-2">Pan artesanal, ingredientes tradicionales y salsas caseras.</p>
           <div class="flex justify-between items-center">
@@ -103,7 +112,9 @@
           </div>
         </article>
 
+        <!-- Hamburguesa (imagen añadida) -->
         <article class="bg-white p-4 rounded-2xl shadow">
+          <img src="assets/hamburguesa.jpg" alt="Hamburguesa Morado" class="w-full h-36 object-cover rounded-md mb-3" onerror="this.style.display='none'">
           <h4 class="font-semibold text-lg">Hamburguesa Morado</h4>
           <p class="text-sm text-gray-600 mb-2">Carne 200g, queso fundido, lechuga fresca y pan brioche.</p>
           <div class="flex justify-between items-center">
@@ -178,7 +189,7 @@
     <section id="ubicacion" class="py-10">
       <h3 class="text-2xl font-bold mb-4">Ubicación</h3>
       <div class="bg-white p-4 rounded-2xl shadow">
-        <p class="text-sm text-gray-700 mb-3">📍 Calle Ejemplo 10, Requena (Comunidad Valenciana)</p>
+        <p class="text-sm text-gray-700 mb-3">📍 Calle San Agustín, Requena, Valencia</p>
         <div class="aspect-w-16 aspect-h-9">
           <!-- Mapa incrustado: reemplaza el src con tu embed real de Google Maps si lo deseas -->
           <iframe class="w-full h-64 rounded-md" src="https://www.google.com/maps/embed?pb=!1m18" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -191,6 +202,7 @@
       <div class="bg-gradient-to-r from-purple-600 to-purple-400 text-white p-6 rounded-2xl">
         <h4 class="text-xl font-bold">Contacto</h4>
         <p class="mt-2">Tel: <a href="tel:+34600000000" class="underline">+34 600 000 000</a> · Email: <a class="underline" href="mailto:contacto@morado.example">contacto@morado.example</a></p>
+        <p class="mt-2">Dirección: Calle San Agustín, Requena, Valencia</p>
         <p class="mt-4 text-sm">Morado es un restaurante local en Requena con una clientela fiel que valora el buen servicio y la calidad.</p>
       </div>
       <footer class="mt-6 text-center text-sm text-gray-500">© <span id="year"></span> Morado — Requena</footer>
